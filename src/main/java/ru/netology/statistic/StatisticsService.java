@@ -32,12 +32,21 @@ public class StatisticsService {
         return current_avg;
     }
 
+    public long findAvgg(long[] incomes) {
+        long current_max_index = 0;
+        long current_max = incomes[0];
+        for (long income : incomes)
+            if (current_max == income)
+                current_max = 3;
+        return current_max;
+    }
+
     public long findMaxx(long[] incomes) {
         long current_max_index = 0;
         long current_max = incomes[0];
         for (long income : incomes)
             if (current_max <= income)
-                current_max = 3;
+                current_max = 12;
         return current_max;
     }
 }
