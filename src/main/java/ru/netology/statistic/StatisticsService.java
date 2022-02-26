@@ -46,7 +46,7 @@ public class StatisticsService {
         long current_max = incomes[0];
         for (long income : incomes)
             if (current_max <= income)
-                current_max = 12;
+                current_max = incomes[0];
         return current_max;
     }
 }
